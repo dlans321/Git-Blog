@@ -1,0 +1,50 @@
+<header id="sidebar">
+    <div id="profile">
+        <a href="{{ site.url }}">
+            <img src="/assets/image/profile.jpg" id="logo">
+        </a>
+        <h1>Gun Joon</h1>
+    </div>
+ 
+    <div id="category">
+        <h3 class="header_item">카테고리</h3> 
+        <ul>
+            <li><a href="{{ site.url }}/category/전체글/">전체글</a></li>
+            {% for category in site.data.category.categories %}
+                <li>
+                    <a class="category_item" href="#none">{{ category.name }}<i class="fa-solid fa-angle-down"></i></a>
+                    <ul>
+                        {% for subcategory in category.subcategories %}
+                            <li>
+                                <i class="fa-solid fa-arrow-right"></i><a href="{{ site.url }}/category/{{subcategory.name}}/">{{ subcategory.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="recent_post">
+        <h3 class="header_item">최신글</h3>
+        <ul>
+            {% for post in site.posts limit:6 %}
+                <li>
+                    <div class="metainfo">
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                        <div class="date">{{ post.date | date: "%Y-%m-%d" }}</div>
+                    </div>
+                    <img class="metaimg" src="{% if post.image %}{{ post.image }}{% else %}{{ site.image }}{% endif %}">
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="icons">
+        <h3 class="header_item">URL</h3>
+        <ul>
+            <li><a href="https://github.com/dlans321" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a></i></li>
+            <li><a href="mailto:dlans321@naver.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a></i></li>
+        </ul>
+    </div>
+</header>

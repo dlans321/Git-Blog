@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body>
+        {% include sidebar.html %}
+
+        <section id="content">
+            <div id="content-inner">
+                {{ content }}
+            </div>
+            {% include footer.html %}
+        </section>
+        
+        <script src="/assets/js/main.js"></script>
+    </body>    
+</html>

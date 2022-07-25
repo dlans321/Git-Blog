@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div class="page-container">
+  <div class="page-night-sky">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+  </div>
+
+  <header class="page-header">
+      <h1 class="page-title">{{ page.title }}</h1>
+  </header>
+
+    <section class="page-section">
+        {{ content }}
+
+        <div class="page-list">
+            <ul>
+              {% for post in paginator.posts %}
+                  <li>
+                    <a href="{{ post.url }}">[{{ post.category }}] {{ post.title }}</a>
+                    <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+                  </li>
+              {% endfor %}
+            </ul>
+          </div>
+          
+          <div class="trail-list">
+            <ul>
+              <li><a {% if paginator.previous_page %} href="{{ paginator.previous_page_path | prepend: site.baseurl }}" {% else %} class="not-exist" {% endif %}>PREV</a></li>
+              
+              {% if paginator.page_trail %}
+                {% for trail in paginator.page_trail %}
+                  <li {% if page.url == trail.path %} class="selected"{% endif %}>
+                    <a href="{{ trail.path | prepend: site.url }}">{{ trail.num }}</a>
+                  </li>
+                {% endfor %}
+              {% else %}
+              <li class="selected"><a href="{{ page.url }}">1</a></li>
+              {% endif %}
+            
+              <li><a {% if paginator.next_page %} href="{{ paginator.next_page_path | prepend: site.baseurl }}" {% else %} class="not-exist"{% endif %}>NEXT</a></li>
+            </ul>
+          </div>
+    </section>
+</div>

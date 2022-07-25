@@ -1,0 +1,29 @@
+# Site settings
+title: dlans321
+url: https://dlans321.github.io
+lang: ko_KR
+timezone: Asia/Seoul
+markdown: kramdown
+image: /assets/image/profile.jpg  
+
+# Gems
+plugins: 
+  - jekyll-paginate-v2
+
+# pagination
+pagination:
+  enabled: true
+  debug: false
+  collection: 'posts'
+  per_page: 7
+  permalink: '/page/:num/'
+  title: ':title'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    atfer: 2
+
+
+
