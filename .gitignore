@@ -1,0 +1,6 @@
+### jekyll ###
+_site/
+.jekyll-metadata
+*-cache/
+Gemfile.lock
+*.sh
