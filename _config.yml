@@ -3,8 +3,16 @@ title: dlans321
 url: https://dlans321.github.io
 lang: ko_KR
 timezone: Asia/Seoul
+image: /assets/image/site/profile.jpg
+
+# Author
+Author:
+  name: dlans321
+  email: dlans321@naver.com
+  url: https://dlans321.github.io
+
+# Build settings
 markdown: kramdown
-image: /assets/image/profile.jpg  
 
 # Gems
 plugins: 
