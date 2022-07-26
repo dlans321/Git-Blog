@@ -4,6 +4,7 @@ url: https://dlans321.github.io
 lang: ko_KR
 timezone: Asia/Seoul
 image: /assets/image/site/profile.jpg
+image_dir: /assets/image/
 
 # Author
 Author:
