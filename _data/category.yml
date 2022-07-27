@@ -1,6 +1,5 @@
 categories: 
   - name: 기본 CS
-    post: 0
     subcategories: 
       - name: 알고리즘
       - name: 데이터통신
@@ -8,11 +7,14 @@ categories:
       - name: 운영체제
 
   - name: WEB
-    post: 0
     subcategories: 
       - name: HTML
       - name: CSS
       - name: JS
       - name: Jekyll Blog
+  
+  - name: 형상 관리
+    subcategories:
+      - name: Git
 
       
